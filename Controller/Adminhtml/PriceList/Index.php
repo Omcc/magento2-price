@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Controller\Adminhtml\PriceList;
+namespace Swe\PriceLists\Controller\Adminhtml\PriceList;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -13,7 +13,7 @@ use Magento\Framework\View\Result\PageFactory;
 
 /**
  * Class Index
- * @package SuttonSilver\PriceLists\Controller\Adminhtml\PriceList
+ * @package Swe\PriceLists\Controller\Adminhtml\PriceList
  */
 class Index extends Action
 {

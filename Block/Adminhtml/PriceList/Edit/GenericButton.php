@@ -1,17 +1,17 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Block\Adminhtml\PriceList\Edit;
+namespace Swe\PriceLists\Block\Adminhtml\PriceList\Edit;
 
 use Magento\Backend\Block\Widget\Context;
 
 /**
  * Class GenericButton
- * @package SuttonSilver\PriceLists\Block\Adminhtml\PriceList\Edit
+ * @package Swe\PriceLists\Block\Adminhtml\PriceList\Edit
  */
 abstract class GenericButton
 {

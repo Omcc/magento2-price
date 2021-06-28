@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Api;
+namespace Swe\PriceLists\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
@@ -14,18 +14,18 @@ interface PriceListCustomersRepositoryInterface
 
     /**
      * Save PriceListCustomers
-     * @param \SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface $priceListCustomers
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface
+     * @param \Swe\PriceLists\Api\Data\PriceListCustomersInterface $priceListCustomers
+     * @return \Swe\PriceLists\Api\Data\PriceListCustomersInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function save(
-        \SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface $priceListCustomers
+        \Swe\PriceLists\Api\Data\PriceListCustomersInterface $priceListCustomers
     );
 
     /**
      * Retrieve PriceListCustomers
      * @param string $pricelistcustomersId
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListCustomersInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function get($pricelistcustomersId);
@@ -33,7 +33,7 @@ interface PriceListCustomersRepositoryInterface
     /**
      * Retrieve PriceListCustomers matching the specified criteria.
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListCustomersSearchResultsInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListCustomersSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(
@@ -42,12 +42,12 @@ interface PriceListCustomersRepositoryInterface
 
     /**
      * Delete PriceListCustomers
-     * @param \SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface $priceListCustomers
+     * @param \Swe\PriceLists\Api\Data\PriceListCustomersInterface $priceListCustomers
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function delete(
-        \SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface $priceListCustomers
+        \Swe\PriceLists\Api\Data\PriceListCustomersInterface $priceListCustomers
     );
 
     /**

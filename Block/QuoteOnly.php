@@ -1,6 +1,6 @@
 <?php
 
-namespace SuttonSilver\PriceLists\Block;
+namespace Swe\PriceLists\Block;
 
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\View\Element\AbstractBlock;
@@ -8,11 +8,11 @@ use Magento\Framework\View\Element\Template;
 use Magento\Framework\View\Element\Template\Context;
 use Magento\Store\Api\Data\StoreInterface;
 use Magento\Store\Model\Information;
-use SuttonSilver\PriceLists\Model\PriceListData;
+use Swe\PriceLists\Model\PriceListData;
 
 /**
  * Class QuoteOnly
- * @package SuttonSilver\PriceLists\Block
+ * @package Swe\PriceLists\Block
  */
 class QuoteOnly extends Template
 {

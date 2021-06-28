@@ -1,20 +1,20 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Controller\Adminhtml\PriceList;
+namespace Swe\PriceLists\Controller\Adminhtml\PriceList;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Registry;
 use Magento\Framework\View\Result\PageFactory;
-use SuttonSilver\PriceLists\Controller\Adminhtml\PriceList;
+use Swe\PriceLists\Controller\Adminhtml\PriceList;
 
 /**
  * Class Edit
- * @package SuttonSilver\PriceLists\Controller\Adminhtml\PriceList
+ * @package Swe\PriceLists\Controller\Adminhtml\PriceList
  */
 class Edit extends PriceList
 {
@@ -46,7 +46,7 @@ class Edit extends PriceList
     {
         // 1. Get ID and create model
         $id = $this->getRequest()->getParam('pricelist_id');
-        $model = $this->_objectManager->create(\SuttonSilver\PriceLists\Model\PriceList::class);
+        $model = $this->_objectManager->create(\Swe\PriceLists\Model\PriceList::class);
 
         // 2. Initial checking
         if ($id) {
@@ -58,7 +58,7 @@ class Edit extends PriceList
                 return $resultRedirect->setPath('*/*/');
             }
         }
-        $this->_coreRegistry->register('suttonsilver_pricelists_pricelist', $model);
+        $this->_coreRegistry->register('Swe_pricelists_pricelist', $model);
 
         // 3. Build edit form
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */

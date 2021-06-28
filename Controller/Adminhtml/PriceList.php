@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Controller\Adminhtml;
+namespace Swe\PriceLists\Controller\Adminhtml;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -14,12 +14,12 @@ use Magento\Framework\Registry;
 
 /**
  * Class PriceList
- * @package SuttonSilver\PriceLists\Controller\Adminhtml
+ * @package Swe\PriceLists\Controller\Adminhtml
  */
 abstract class PriceList extends Action
 {
 
-    const ADMIN_RESOURCE = 'SuttonSilver_PriceLists::top_level';
+    const ADMIN_RESOURCE = 'Swe_PriceLists::top_level';
     /**
      * @var Registry
      */
@@ -46,7 +46,7 @@ abstract class PriceList extends Action
     public function initPage($resultPage)
     {
         $resultPage->setActiveMenu(self::ADMIN_RESOURCE)
-            ->addBreadcrumb(__('SuttonSilver'), __('SuttonSilver'))
+            ->addBreadcrumb(__('Swe'), __('Swe'))
             ->addBreadcrumb(__('Price List'), __('Price List'));
         return $resultPage;
     }

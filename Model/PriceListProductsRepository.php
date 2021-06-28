@@ -1,30 +1,30 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Model;
+namespace Swe\PriceLists\Model;
 
-use SuttonSilver\PriceLists\Api\Data\PriceListProductsSearchResultsInterfaceFactory;
+use Swe\PriceLists\Api\Data\PriceListProductsSearchResultsInterfaceFactory;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Framework\Api\DataObjectHelper;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
-use SuttonSilver\PriceLists\Api\PriceListProductsRepositoryInterface;
+use Swe\PriceLists\Api\PriceListProductsRepositoryInterface;
 use Magento\Framework\Reflection\DataObjectProcessor;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory as PriceListProductsCollectionFactory;
+use Swe\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory as PriceListProductsCollectionFactory;
 use Magento\Framework\Api\ExtensibleDataObjectConverter;
-use SuttonSilver\PriceLists\Api\Data\PriceListProductsInterfaceFactory;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts as ResourcePriceListProducts;
+use Swe\PriceLists\Api\Data\PriceListProductsInterfaceFactory;
+use Swe\PriceLists\Model\ResourceModel\PriceListProducts as ResourcePriceListProducts;
 use Magento\Framework\Exception\NoSuchEntityException;
 
 /**
  * Class PriceListProductsRepository
- * @package SuttonSilver\PriceLists\Model
+ * @package Swe\PriceLists\Model
  */
 class PriceListProductsRepository implements PriceListProductsRepositoryInterface
 {
@@ -118,7 +118,7 @@ class PriceListProductsRepository implements PriceListProductsRepositoryInterfac
      * {@inheritdoc}
      */
     public function save(
-        \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
+        \Swe\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
     ) {
         /* if (empty($priceListProducts->getStoreId())) {
             $storeId = $this->storeManager->getStore()->getId();
@@ -128,7 +128,7 @@ class PriceListProductsRepository implements PriceListProductsRepositoryInterfac
         $priceListProductsData = $this->extensibleDataObjectConverter->toNestedArray(
             $priceListProducts,
             [],
-            \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface::class
+            \Swe\PriceLists\Api\Data\PriceListProductsInterface::class
         );
 
         $priceListProductsModel = $this->priceListProductsFactory->create()->setData($priceListProductsData);
@@ -167,7 +167,7 @@ class PriceListProductsRepository implements PriceListProductsRepositoryInterfac
 
         $this->extensionAttributesJoinProcessor->process(
             $collection,
-            \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface::class
+            \Swe\PriceLists\Api\Data\PriceListProductsInterface::class
         );
 
         $this->collectionProcessor->process($criteria, $collection);
@@ -189,7 +189,7 @@ class PriceListProductsRepository implements PriceListProductsRepositoryInterfac
      * {@inheritdoc}
      */
     public function delete(
-        \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
+        \Swe\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
     ) {
         try {
             $priceListProductsModel = $this->priceListProductsFactory->create();

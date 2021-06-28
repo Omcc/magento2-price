@@ -1,19 +1,19 @@
 <?php
 
-namespace SuttonSilver\PriceLists\Model;
+namespace Swe\PriceLists\Model;
 
 use Magento\Customer\Model\SessionFactory as Session;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\Model\Context;
 use Magento\Framework\Registry;
 use Magento\Store\Model\ScopeInterface;
-use SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory as PriceCustomersCollection;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory as PriceProductsCollection;
+use Swe\PriceLists\Api\Data\PriceListProductsInterface;
+use Swe\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory as PriceCustomersCollection;
+use Swe\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory as PriceProductsCollection;
 
 /**
  * Class PriceListData
- * @package SuttonSilver\PriceLists\Model
+ * @package Swe\PriceLists\Model
  */
 class PriceListData extends \Magento\Framework\Model\AbstractModel
 {

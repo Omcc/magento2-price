@@ -1,5 +1,5 @@
 {
-    "name": "swe/magento2-pricelists",
+    "name": "swe/pricelists",
     "description": "Price List to set product specific customer pricing",
     "type": "magento2-module",
     "license": "proprietary",

@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Api\Data;
+namespace Swe\PriceLists\Api\Data;
 
 interface PriceListInterface extends \Magento\Framework\Api\ExtensibleDataInterface
 {
@@ -23,7 +23,7 @@ interface PriceListInterface extends \Magento\Framework\Api\ExtensibleDataInterf
     /**
      * Set pricelist_id
      * @param string $pricelistId
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListInterface
      */
     public function setPricelistId($pricelistId);
 
@@ -36,23 +36,23 @@ interface PriceListInterface extends \Magento\Framework\Api\ExtensibleDataInterf
     /**
      * Set name
      * @param string $name
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListInterface
      */
     public function setName($name);
 
     /**
      * Retrieve existing extension attributes object or create a new one.
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListExtensionInterface|null
+     * @return \Swe\PriceLists\Api\Data\PriceListExtensionInterface|null
      */
     public function getExtensionAttributes();
 
     /**
      * Set an extension attributes object.
-     * @param \SuttonSilver\PriceLists\Api\Data\PriceListExtensionInterface $extensionAttributes
+     * @param \Swe\PriceLists\Api\Data\PriceListExtensionInterface $extensionAttributes
      * @return $this
      */
     public function setExtensionAttributes(
-        \SuttonSilver\PriceLists\Api\Data\PriceListExtensionInterface $extensionAttributes
+        \Swe\PriceLists\Api\Data\PriceListExtensionInterface $extensionAttributes
     );
 
     /**
@@ -64,7 +64,7 @@ interface PriceListInterface extends \Magento\Framework\Api\ExtensibleDataInterf
     /**
      * Set description
      * @param string $description
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListInterface
      */
     public function setDescription($description);
 }

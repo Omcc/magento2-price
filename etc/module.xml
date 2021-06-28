@@ -1,12 +1,12 @@
 <?xml version="1.0" ?>
 <!--
-  ~ Daniel Coull <d.coull@suttonsilver.co.uk>
+  ~ Daniel Coull <d.coull@Swe.co.uk>
   ~ 2019-2020
   ~
   -->
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-	<module name="SuttonSilver_PriceLists" setup_version="1.0.1">
+	<module name="Swe_PriceLists" setup_version="1.0.1">
 		<sequence>
 			<module name="Magento_Catalog"/>
 		</sequence>

@@ -1,36 +1,36 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Controller\Adminhtml\PriceList;
+namespace Swe\PriceLists\Controller\Adminhtml\PriceList;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Registry;
-use SuttonSilver\PriceLists\Controller\Adminhtml\PriceList;
+use Swe\PriceLists\Controller\Adminhtml\PriceList;
 
 /**
  * Class Delete
- * @package SuttonSilver\PriceLists\Controller\Adminhtml\PriceList
+ * @package Swe\PriceLists\Controller\Adminhtml\PriceList
  */
 class Delete extends PriceList
 {
-    /** @var \SuttonSilver\PriceLists\Model\ResourceModel\PriceListCustomers\Collection */
+    /** @var \Swe\PriceLists\Model\ResourceModel\PriceListCustomers\Collection */
     protected $customerCollection;
 
-    /** @var \SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts\Collection */
+    /** @var \Swe\PriceLists\Model\ResourceModel\PriceListProducts\Collection */
     protected $productsCollection;
 
     /**
      * Delete constructor.
-     * @param \SuttonSilver\PriceLists\Model\ResourceModel\PriceListCustomers\Collection $customerCollection
-     * @param \SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts\Collection $productsCollection
+     * @param \Swe\PriceLists\Model\ResourceModel\PriceListCustomers\Collection $customerCollection
+     * @param \Swe\PriceLists\Model\ResourceModel\PriceListProducts\Collection $productsCollection
      */
     public function __construct(
-        \SuttonSilver\PriceLists\Model\ResourceModel\PriceListCustomers\Collection $customerCollection,
-        \SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts\Collection $productsCollection,
+        \Swe\PriceLists\Model\ResourceModel\PriceListCustomers\Collection $customerCollection,
+        \Swe\PriceLists\Model\ResourceModel\PriceListProducts\Collection $productsCollection,
         Context $context,
         Registry $coreRegistry
     ) {
@@ -54,7 +54,7 @@ class Delete extends PriceList
         if ($id) {
             try {
                 // init model and delete
-                $model = $this->_objectManager->create(\SuttonSilver\PriceLists\Model\PriceList::class);
+                $model = $this->_objectManager->create(\Swe\PriceLists\Model\PriceList::class);
                 $model->load($id);
 
                 // Delete customer and product rows

@@ -1,13 +1,13 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Plugin\Magento\Catalog\Block\Product;
+namespace Swe\PriceLists\Plugin\Magento\Catalog\Block\Product;
 
-use \SuttonSilver\PriceLists\Model\PriceListData;
+use \Swe\PriceLists\Model\PriceListData;
 
 class ListProduct
 {

@@ -1,22 +1,22 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Controller\Adminhtml\PriceList;
+namespace Swe\PriceLists\Controller\Adminhtml\PriceList;
 
 use Magento\Backend\App\Action\Context;
 use Magento\Backend\Model\View\Result\ForwardFactory;
 use Magento\Framework\Controller\Result\Forward;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Registry;
-use SuttonSilver\PriceLists\Controller\Adminhtml\PriceList;
+use Swe\PriceLists\Controller\Adminhtml\PriceList;
 
 /**
  * Class NewAction
- * @package SuttonSilver\PriceLists\Controller\Adminhtml\PriceList
+ * @package Swe\PriceLists\Controller\Adminhtml\PriceList
  */
 class NewAction extends PriceList
 {

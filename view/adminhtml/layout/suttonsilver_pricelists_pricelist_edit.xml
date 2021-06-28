@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-  ~ Daniel Coull <d.coull@suttonsilver.co.uk>
+  ~ Daniel Coull <d.coull@Swe.co.uk>
   ~ 2019-2020
   ~
   -->
@@ -9,7 +9,7 @@
 	<update handle="styles"/>
 	<body>
 		<referenceContainer name="content">
-			<uiComponent name="suttonsilver_pricelists_pricelist_form"/>
+			<uiComponent name="Swe_pricelists_pricelist_form"/>
 		</referenceContainer>
 	</body>
 </page>

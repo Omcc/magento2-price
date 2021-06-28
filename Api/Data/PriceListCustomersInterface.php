@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Api\Data;
+namespace Swe\PriceLists\Api\Data;
 
 interface PriceListCustomersInterface extends \Magento\Framework\Api\ExtensibleDataInterface
 {
@@ -23,7 +23,7 @@ interface PriceListCustomersInterface extends \Magento\Framework\Api\ExtensibleD
     /**
      * Set pricelistcustomers_id
      * @param string $pricelistcustomersId
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListCustomersInterface
      */
     public function setPricelistcustomersId($pricelistcustomersId);
 
@@ -36,23 +36,23 @@ interface PriceListCustomersInterface extends \Magento\Framework\Api\ExtensibleD
     /**
      * Set price_list_id
      * @param string $priceListId
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListCustomersInterface
      */
     public function setPriceListId($priceListId);
 
     /**
      * Retrieve existing extension attributes object or create a new one.
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListCustomersExtensionInterface|null
+     * @return \Swe\PriceLists\Api\Data\PriceListCustomersExtensionInterface|null
      */
     public function getExtensionAttributes();
 
     /**
      * Set an extension attributes object.
-     * @param \SuttonSilver\PriceLists\Api\Data\PriceListCustomersExtensionInterface $extensionAttributes
+     * @param \Swe\PriceLists\Api\Data\PriceListCustomersExtensionInterface $extensionAttributes
      * @return $this
      */
     public function setExtensionAttributes(
-        \SuttonSilver\PriceLists\Api\Data\PriceListCustomersExtensionInterface $extensionAttributes
+        \Swe\PriceLists\Api\Data\PriceListCustomersExtensionInterface $extensionAttributes
     );
 
     /**
@@ -64,7 +64,7 @@ interface PriceListCustomersInterface extends \Magento\Framework\Api\ExtensibleD
     /**
      * Set price_list_customer_id
      * @param string $priceListCustomerId
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListCustomersInterface
      */
     public function setPriceListCustomerId($priceListCustomerId);
 }

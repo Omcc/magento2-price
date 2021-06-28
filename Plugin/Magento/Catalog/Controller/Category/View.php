@@ -1,17 +1,17 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Plugin\Magento\Catalog\Controller\Category;
+namespace Swe\PriceLists\Plugin\Magento\Catalog\Controller\Category;
 
 use Magento\Customer\Model\SessionFactory as Session;
 use Magento\Customer\Model\Url;
 use Magento\Framework\App\ActionInterface;
 use Magento\Framework\App\RequestInterface;
-use SuttonSilver\PriceLists\Model\PriceListData;
+use Swe\PriceLists\Model\PriceListData;
 
 class View
 {

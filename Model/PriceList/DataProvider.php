@@ -1,21 +1,21 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Model\PriceList;
+namespace Swe\PriceLists\Model\PriceList;
 
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Framework\UrlInterface;
 
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceList\CollectionFactory;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceList\Collection;
+use Swe\PriceLists\Model\ResourceModel\PriceList\CollectionFactory;
+use Swe\PriceLists\Model\ResourceModel\PriceList\Collection;
 
 /**
  * Class DataProvider
- * @package SuttonSilver\PriceLists\Model\PriceList
+ * @package Swe\PriceLists\Model\PriceList
  */
 class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
 {
@@ -52,8 +52,8 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
         CollectionFactory $collectionFactory,
         DataPersistorInterface $dataPersistor,
         UrlInterface $url,
-        \SuttonSilver\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory $priceListCustomersCollection,
-        \SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory $priceListProductsCollection,
+        \Swe\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory $priceListCustomersCollection,
+        \Swe\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory $priceListProductsCollection,
         array $meta = [],
         array $data = []
     ) {
@@ -108,7 +108,7 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
                 ];
             }
         }
-        $data = $this->dataPersistor->get('suttonsilver_pricelists_pricelist');
+        $data = $this->dataPersistor->get('Swe_pricelists_pricelist');
 
         $model = false;
         if (!empty($data)) {
@@ -117,7 +117,7 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
             $model->setData($data);
             $this->loadedData[$model->getPricelistId()] = $model->getData();
 
-            $this->dataPersistor->clear('suttonsilver_pricelists_pricelist');
+            $this->dataPersistor->clear('Swe_pricelists_pricelist');
         }
 
         return $this->loadedData;
@@ -127,13 +127,13 @@ class DataProvider extends \Magento\Ui\DataProvider\AbstractDataProvider
     {
         $meta = parent::getMeta();
         $meta["general"]['children']["customers"]['arguments']['data']['config']['searchUrl'] =
-            $this->url->getUrl('suttonsilver_pricelists/pricelist/searchcustomers');
+            $this->url->getUrl('Swe_pricelists/pricelist/searchcustomers');
 
         $meta["general"]['children']["products"]['children']['record']['children']['product_id']['arguments']['data']['config']['searchUrl'] =
-            $this->url->getUrl('suttonsilver_pricelists/pricelist/searchproducts');
+            $this->url->getUrl('Swe_pricelists/pricelist/searchproducts');
 
         $meta["general"]['children']["products"]['children']['record']['children']['product_id']['arguments']['data']['config']['validationUrl'] =
-            $this->url->getUrl('suttonsilver_pricelists/pricelist/validateproducts');
+            $this->url->getUrl('Swe_pricelists/pricelist/validateproducts');
 
         return $meta;
     }

@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Model\Config\Source;
+namespace Swe\PriceLists\Model\Config\Source;
 
 use Magento\Catalog\Model\ResourceModel\Product\CollectionFactory;
 use Magento\Framework\App\CacheInterface;
@@ -14,7 +14,7 @@ use Magento\Framework\Serialize\SerializerInterface;
 
 /**
  * Class Products
- * @package SuttonSilver\PriceLists\Model\Config\Source
+ * @package Swe\PriceLists\Model\Config\Source
  */
 class Products implements \Magento\Framework\Data\OptionSourceInterface
 {

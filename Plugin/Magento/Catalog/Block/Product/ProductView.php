@@ -1,14 +1,14 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Plugin\Magento\Catalog\Block\Product;
+namespace Swe\PriceLists\Plugin\Magento\Catalog\Block\Product;
 
 use Magento\Catalog\Block\Product\View;
-use SuttonSilver\PriceLists\Model\PriceListData;
+use Swe\PriceLists\Model\PriceListData;
 
 class ProductView
 {
@@ -48,7 +48,7 @@ class ProductView
                 }
 
                 if (!in_array($cId, $customerIds)) {
-                    $result =  'SuttonSilver_PriceLists::product/view/form.phtml';
+                    $result =  'Swe_PriceLists::product/view/form.phtml';
                 }
             }
         }

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <!--
-  ~ Daniel Coull <d.coull@suttonsilver.co.uk>
+  ~ Daniel Coull <d.coull@Swe.co.uk>
   ~ 2019-2020
   ~
   -->
@@ -9,7 +9,7 @@
       xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <argument name="data" xsi:type="array">
         <item name="js_config" xsi:type="array">
-            <item name="provider" xsi:type="string">suttonsilver_pricelists_pricelist_form.pricelist_form_data_source
+            <item name="provider" xsi:type="string">Swe_pricelists_pricelist_form.pricelist_form_data_source
             </item>
         </item>
         <item name="label" translate="true" xsi:type="string">General Information</item>
@@ -17,16 +17,16 @@
     </argument>
     <settings>
         <buttons>
-            <button class="SuttonSilver\PriceLists\Block\Adminhtml\PriceList\Edit\BackButton" name="back"/>
-            <button class="SuttonSilver\PriceLists\Block\Adminhtml\PriceList\Edit\DeleteButton" name="delete"/>
-            <button class="SuttonSilver\PriceLists\Block\Adminhtml\PriceList\Edit\SaveButton" name="save"/>
-            <button class="SuttonSilver\PriceLists\Block\Adminhtml\PriceList\Edit\SaveAndContinueButton"
+            <button class="Swe\PriceLists\Block\Adminhtml\PriceList\Edit\BackButton" name="back"/>
+            <button class="Swe\PriceLists\Block\Adminhtml\PriceList\Edit\DeleteButton" name="delete"/>
+            <button class="Swe\PriceLists\Block\Adminhtml\PriceList\Edit\SaveButton" name="save"/>
+            <button class="Swe\PriceLists\Block\Adminhtml\PriceList\Edit\SaveAndContinueButton"
                     name="save_and_continue"/>
         </buttons>
-        <namespace>suttonsilver_pricelists_pricelist_form</namespace>
+        <namespace>Swe_pricelists_pricelist_form</namespace>
         <dataScope>data</dataScope>
         <deps>
-            <dep>suttonsilver_pricelists_pricelist_form.pricelist_form_data_source</dep>
+            <dep>Swe_pricelists_pricelist_form.pricelist_form_data_source</dep>
         </deps>
     </settings>
     <dataSource name="pricelist_form_data_source">
@@ -38,7 +38,7 @@
         <settings>
             <submitUrl path="*/*/save"/>
         </settings>
-        <dataProvider class="SuttonSilver\PriceLists\Model\PriceList\DataProvider" name="pricelist_form_data_source">
+        <dataProvider class="Swe\PriceLists\Model\PriceList\DataProvider" name="pricelist_form_data_source">
             <settings>
                 <requestFieldName>pricelist_id</requestFieldName>
                 <primaryFieldName>pricelist_id</primaryFieldName>
@@ -83,11 +83,11 @@
 
         <field name="customers">
             <argument name="data" xsi:type="array">
-                <item name="options" xsi:type="object">SuttonSilver\PriceLists\Model\Config\Source\Customers</item>
+                <item name="options" xsi:type="object">Swe\PriceLists\Model\Config\Source\Customers</item>
                 <item name="config" xsi:type="array">
                     <item name="label" xsi:type="string">Customers</item>
                     <item name="formElement" xsi:type="string">select</item>
-                    <item name="component" xsi:type="string">SuttonSilver_PriceLists/js/ui-custom-select</item>
+                    <item name="component" xsi:type="string">Swe_PriceLists/js/ui-custom-select</item>
                     <item name="disableLabel" xsi:type="boolean">false</item>
                     <item name="filterOptions" xsi:type="boolean">true</item>
                     <item name="chipsEnabled" xsi:type="boolean">true</item>
@@ -95,7 +95,7 @@
                     <item name="levelsVisibility" xsi:type="string">1</item>
                     <item name="multiple" xsi:type="boolean">true</item>
                     <item name="closeBtn" xsi:type="boolean">true</item>
-                    <item name="template" xsi:type="string">SuttonSilver_PriceLists/ui-select</item>
+                    <item name="template" xsi:type="string">Swe_PriceLists/ui-select</item>
                     <item name="searchUrl" xsi:type="string">catalog/product/search</item>
                     <item name="filterPlaceholder" xsi:type="string">Customer Name</item>
                     <item name="isDisplayEmptyPlaceholder" xsi:type="boolean">true</item>
@@ -132,12 +132,12 @@
                 </argument>
                 <field name="product_id">
                     <argument name="data" xsi:type="array">
-                        <item name="options" xsi:type="object">SuttonSilver\PriceLists\Model\Config\Source\Products
+                        <item name="options" xsi:type="object">Swe\PriceLists\Model\Config\Source\Products
                         </item>
                         <item name="config" xsi:type="array">
                             <item name="label" xsi:type="string">Products</item>
                             <item name="formElement" xsi:type="string">select</item>
-                            <item name="component" xsi:type="string">SuttonSilver_PriceLists/js/ui-custom-select</item>
+                            <item name="component" xsi:type="string">Swe_PriceLists/js/ui-custom-select</item>
                             <item name="disableLabel" xsi:type="boolean">true</item>
                             <item name="filterOptions" xsi:type="boolean">true</item>
                             <item name="chipsEnabled" xsi:type="boolean">true</item>

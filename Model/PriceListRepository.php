@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Model;
+namespace Swe\PriceLists\Model;
 
 use Magento\Framework\Api\DataObjectHelper;
 use Magento\Framework\Api\ExtensibleDataObjectConverter;
@@ -16,15 +16,15 @@ use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Framework\Exception\NoSuchEntityException;
 use Magento\Framework\Reflection\DataObjectProcessor;
 use Magento\Store\Model\StoreManagerInterface;
-use SuttonSilver\PriceLists\Api\Data\PriceListInterfaceFactory;
-use SuttonSilver\PriceLists\Api\Data\PriceListSearchResultsInterfaceFactory;
-use SuttonSilver\PriceLists\Api\PriceListRepositoryInterface;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceList as ResourcePriceList;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceList\CollectionFactory as PriceListCollectionFactory;
+use Swe\PriceLists\Api\Data\PriceListInterfaceFactory;
+use Swe\PriceLists\Api\Data\PriceListSearchResultsInterfaceFactory;
+use Swe\PriceLists\Api\PriceListRepositoryInterface;
+use Swe\PriceLists\Model\ResourceModel\PriceList as ResourcePriceList;
+use Swe\PriceLists\Model\ResourceModel\PriceList\CollectionFactory as PriceListCollectionFactory;
 
 /**
  * Class PriceListRepository
- * @package SuttonSilver\PriceLists\Model
+ * @package Swe\PriceLists\Model
  */
 class PriceListRepository implements PriceListRepositoryInterface
 {
@@ -117,7 +117,7 @@ class PriceListRepository implements PriceListRepositoryInterface
      * {@inheritdoc}
      */
     public function save(
-        \SuttonSilver\PriceLists\Api\Data\PriceListInterface $priceList
+        \Swe\PriceLists\Api\Data\PriceListInterface $priceList
     ) {
         /* if (empty($priceList->getStoreId())) {
             $storeId = $this->storeManager->getStore()->getId();
@@ -127,7 +127,7 @@ class PriceListRepository implements PriceListRepositoryInterface
         $priceListData = $this->extensibleDataObjectConverter->toNestedArray(
             $priceList,
             [],
-            \SuttonSilver\PriceLists\Api\Data\PriceListInterface::class
+            \Swe\PriceLists\Api\Data\PriceListInterface::class
         );
 
         $priceListModel = $this->priceListFactory->create()->setData($priceListData);
@@ -166,7 +166,7 @@ class PriceListRepository implements PriceListRepositoryInterface
 
         $this->extensionAttributesJoinProcessor->process(
             $collection,
-            \SuttonSilver\PriceLists\Api\Data\PriceListInterface::class
+            \Swe\PriceLists\Api\Data\PriceListInterface::class
         );
 
         $this->collectionProcessor->process($criteria, $collection);
@@ -188,7 +188,7 @@ class PriceListRepository implements PriceListRepositoryInterface
      * {@inheritdoc}
      */
     public function delete(
-        \SuttonSilver\PriceLists\Api\Data\PriceListInterface $priceList
+        \Swe\PriceLists\Api\Data\PriceListInterface $priceList
     ) {
         try {
             $priceListModel = $this->priceListFactory->create();

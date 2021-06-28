@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Model\ResourceModel\PriceList;
+namespace Swe\PriceLists\Model\ResourceModel\PriceList;
 
 class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection
 {
@@ -18,8 +18,8 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     protected function _construct()
     {
         $this->_init(
-            \SuttonSilver\PriceLists\Model\PriceList::class,
-            \SuttonSilver\PriceLists\Model\ResourceModel\PriceList::class
+            \Swe\PriceLists\Model\PriceList::class,
+            \Swe\PriceLists\Model\ResourceModel\PriceList::class
         );
     }
 }

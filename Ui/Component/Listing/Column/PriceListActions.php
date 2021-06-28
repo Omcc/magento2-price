@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Ui\Component\Listing\Column;
+namespace Swe\PriceLists\Ui\Component\Listing\Column;
 
 use Magento\Framework\UrlInterface;
 use Magento\Framework\View\Element\UiComponent\ContextInterface;
@@ -14,13 +14,13 @@ use Magento\Ui\Component\Listing\Columns\Column;
 
 /**
  * Class PriceListActions
- * @package SuttonSilver\PriceLists\Ui\Component\Listing\Column
+ * @package Swe\PriceLists\Ui\Component\Listing\Column
  */
 class PriceListActions extends Column
 {
-    const URL_PATH_DELETE = 'suttonsilver_pricelists/pricelist/delete';
-    const URL_PATH_DETAILS = 'suttonsilver_pricelists/pricelist/details';
-    const URL_PATH_EDIT = 'suttonsilver_pricelists/pricelist/edit';
+    const URL_PATH_DELETE = 'Swe_pricelists/pricelist/delete';
+    const URL_PATH_DETAILS = 'Swe_pricelists/pricelist/details';
+    const URL_PATH_EDIT = 'Swe_pricelists/pricelist/edit';
     /**
      * @var UrlInterface
      */

@@ -1,31 +1,31 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Model;
+namespace Swe\PriceLists\Model;
 
 use Magento\Framework\Api\ExtensionAttribute\JoinProcessorInterface;
 use Magento\Framework\Exception\CouldNotSaveException;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\Framework\Api\DataObjectHelper;
-use SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface;
-use SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterfaceFactory;
-use SuttonSilver\PriceLists\Api\Data\PriceListCustomersSearchResultsInterfaceFactory;
+use Swe\PriceLists\Api\Data\PriceListCustomersInterface;
+use Swe\PriceLists\Api\Data\PriceListCustomersInterfaceFactory;
+use Swe\PriceLists\Api\Data\PriceListCustomersSearchResultsInterfaceFactory;
 use Magento\Framework\Api\SearchCriteria\CollectionProcessorInterface;
 use Magento\Framework\Exception\CouldNotDeleteException;
 use Magento\Framework\Reflection\DataObjectProcessor;
 use Magento\Framework\Api\ExtensibleDataObjectConverter;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory as PriceListCustomersCollectionFactory;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceListCustomers as ResourcePriceListCustomers;
+use Swe\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory as PriceListCustomersCollectionFactory;
+use Swe\PriceLists\Model\ResourceModel\PriceListCustomers as ResourcePriceListCustomers;
 use Magento\Framework\Exception\NoSuchEntityException;
-use SuttonSilver\PriceLists\Api\PriceListCustomersRepositoryInterface;
+use Swe\PriceLists\Api\PriceListCustomersRepositoryInterface;
 
 /**
  * Class PriceListCustomersRepository
- * @package SuttonSilver\PriceLists\Model
+ * @package Swe\PriceLists\Model
  */
 class PriceListCustomersRepository implements PriceListCustomersRepositoryInterface
 {

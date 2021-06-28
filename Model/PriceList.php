@@ -1,22 +1,22 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Model;
+namespace Swe\PriceLists\Model;
 
 use Magento\Framework\Api\DataObjectHelper;
 use Magento\Framework\Model\Context;
 use Magento\Framework\Registry;
-use SuttonSilver\PriceLists\Api\Data\PriceListInterface;
-use SuttonSilver\PriceLists\Api\Data\PriceListInterfaceFactory;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceList\Collection;
+use Swe\PriceLists\Api\Data\PriceListInterface;
+use Swe\PriceLists\Api\Data\PriceListInterfaceFactory;
+use Swe\PriceLists\Model\ResourceModel\PriceList\Collection;
 
 /**
  * Class PriceList
- * @package SuttonSilver\PriceLists\Model
+ * @package Swe\PriceLists\Model
  */
 class PriceList extends \Magento\Framework\Model\AbstractModel
 {
@@ -32,7 +32,7 @@ class PriceList extends \Magento\Framework\Model\AbstractModel
     /**
      * @var string
      */
-    protected $_eventPrefix = 'suttonsilver_pricelists_pricelist';
+    protected $_eventPrefix = 'Swe_pricelists_pricelist';
 
     /**
      * @param Context $context

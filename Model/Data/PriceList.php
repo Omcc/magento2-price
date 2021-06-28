@@ -1,18 +1,18 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Model\Data;
+namespace Swe\PriceLists\Model\Data;
 
 use Magento\Framework\Api\AbstractExtensibleObject;
-use SuttonSilver\PriceLists\Api\Data\PriceListInterface;
+use Swe\PriceLists\Api\Data\PriceListInterface;
 
 /**
  * Class PriceList
- * @package SuttonSilver\PriceLists\Model\Data
+ * @package Swe\PriceLists\Model\Data
  */
 class PriceList extends AbstractExtensibleObject implements PriceListInterface
 {
@@ -29,7 +29,7 @@ class PriceList extends AbstractExtensibleObject implements PriceListInterface
     /**
      * Set pricelist_id
      * @param string $pricelistId
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListInterface
      */
     public function setPricelistId($pricelistId)
     {
@@ -48,7 +48,7 @@ class PriceList extends AbstractExtensibleObject implements PriceListInterface
     /**
      * Set name
      * @param string $name
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListInterface
      */
     public function setName($name)
     {
@@ -57,7 +57,7 @@ class PriceList extends AbstractExtensibleObject implements PriceListInterface
 
     /**
      * Retrieve existing extension attributes object or create a new one.
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListExtensionInterface|null
+     * @return \Swe\PriceLists\Api\Data\PriceListExtensionInterface|null
      */
     public function getExtensionAttributes()
     {
@@ -66,11 +66,11 @@ class PriceList extends AbstractExtensibleObject implements PriceListInterface
 
     /**
      * Set an extension attributes object.
-     * @param \SuttonSilver\PriceLists\Api\Data\PriceListExtensionInterface $extensionAttributes
+     * @param \Swe\PriceLists\Api\Data\PriceListExtensionInterface $extensionAttributes
      * @return $this
      */
     public function setExtensionAttributes(
-        \SuttonSilver\PriceLists\Api\Data\PriceListExtensionInterface $extensionAttributes
+        \Swe\PriceLists\Api\Data\PriceListExtensionInterface $extensionAttributes
     ) {
         return $this->_setExtensionAttributes($extensionAttributes);
     }
@@ -87,7 +87,7 @@ class PriceList extends AbstractExtensibleObject implements PriceListInterface
     /**
      * Set description
      * @param string $description
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListInterface
      */
     public function setDescription($description)
     {

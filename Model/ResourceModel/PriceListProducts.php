@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Model\ResourceModel;
+namespace Swe\PriceLists\Model\ResourceModel;
 
 class PriceListProducts extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
@@ -17,6 +17,6 @@ class PriceListProducts extends \Magento\Framework\Model\ResourceModel\Db\Abstra
      */
     protected function _construct()
     {
-        $this->_init('suttonsilver_pricelists_pricelistproducts', 'pricelistproducts_id');
+        $this->_init('Swe_pricelists_pricelistproducts', 'pricelistproducts_id');
     }
 }

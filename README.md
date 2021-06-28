@@ -33,8 +33,8 @@ Installation:
 
 ```bash
 composer config repositories.productpricelist vcs https://github.com/danrcoull/product-price-list.git
-composer require suttonsilver/module-pricelists:dev-master
-php bin/magento module:enable SuttonSilver_PriceLists
+composer require Swe/module-pricelists:dev-master
+php bin/magento module:enable Swe_PriceLists
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile #yes do this we use extension attributes so you can see the original price and the custom price.
 php bin/magento setup:static-content:deploy en_GB en_US -f 

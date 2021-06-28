@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Api;
+namespace Swe\PriceLists\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
@@ -14,18 +14,18 @@ interface PriceListProductsRepositoryInterface
 
     /**
      * Save PriceListProducts
-     * @param \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface
+     * @param \Swe\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
+     * @return \Swe\PriceLists\Api\Data\PriceListProductsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function save(
-        \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
+        \Swe\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
     );
 
     /**
      * Retrieve PriceListProducts
      * @param string $pricelistproductsId
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListProductsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function get($pricelistproductsId);
@@ -33,7 +33,7 @@ interface PriceListProductsRepositoryInterface
     /**
      * Retrieve PriceListProducts matching the specified criteria.
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListProductsSearchResultsInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListProductsSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(
@@ -42,12 +42,12 @@ interface PriceListProductsRepositoryInterface
 
     /**
      * Delete PriceListProducts
-     * @param \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
+     * @param \Swe\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function delete(
-        \SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
+        \Swe\PriceLists\Api\Data\PriceListProductsInterface $priceListProducts
     );
 
     /**

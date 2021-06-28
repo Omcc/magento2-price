@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Api;
+namespace Swe\PriceLists\Api;
 
 use Magento\Framework\Api\SearchCriteriaInterface;
 
@@ -14,18 +14,18 @@ interface PriceListRepositoryInterface
 
     /**
      * Save PriceList
-     * @param \SuttonSilver\PriceLists\Api\Data\PriceListInterface $priceList
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListInterface
+     * @param \Swe\PriceLists\Api\Data\PriceListInterface $priceList
+     * @return \Swe\PriceLists\Api\Data\PriceListInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function save(
-        \SuttonSilver\PriceLists\Api\Data\PriceListInterface $priceList
+        \Swe\PriceLists\Api\Data\PriceListInterface $priceList
     );
 
     /**
      * Retrieve PriceList
      * @param string $pricelistId
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function get($pricelistId);
@@ -33,7 +33,7 @@ interface PriceListRepositoryInterface
     /**
      * Retrieve PriceList matching the specified criteria.
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
-     * @return \SuttonSilver\PriceLists\Api\Data\PriceListSearchResultsInterface
+     * @return \Swe\PriceLists\Api\Data\PriceListSearchResultsInterface
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function getList(
@@ -42,12 +42,12 @@ interface PriceListRepositoryInterface
 
     /**
      * Delete PriceList
-     * @param \SuttonSilver\PriceLists\Api\Data\PriceListInterface $priceList
+     * @param \Swe\PriceLists\Api\Data\PriceListInterface $priceList
      * @return bool true on success
      * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function delete(
-        \SuttonSilver\PriceLists\Api\Data\PriceListInterface $priceList
+        \Swe\PriceLists\Api\Data\PriceListInterface $priceList
     );
 
     /**

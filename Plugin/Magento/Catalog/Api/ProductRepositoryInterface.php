@@ -1,17 +1,17 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Plugin\Magento\Catalog\Api;
+namespace Swe\PriceLists\Plugin\Magento\Catalog\Api;
 
 use Magento\Catalog\Api\Data\ProductExtensionFactory;
 use Magento\Catalog\Api\Data\ProductExtensionInterface;
 use Magento\Catalog\Api\Data\ProductInterface;
 use Magento\Catalog\Api\Data\ProductSearchResultsInterface;
-use SuttonSilver\PriceLists\Model\PriceListData;
+use Swe\PriceLists\Model\PriceListData;
 
 class ProductRepositoryInterface
 {

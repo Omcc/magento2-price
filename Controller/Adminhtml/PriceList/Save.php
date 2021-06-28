@@ -1,11 +1,11 @@
 <?php
 /**
- * Daniel Coull <d.coull@suttonsilver.co.uk>
+ * Daniel Coull <d.coull@Swe.co.uk>
  * 2019-2020
  *
  */
 
-namespace SuttonSilver\PriceLists\Controller\Adminhtml\PriceList;
+namespace Swe\PriceLists\Controller\Adminhtml\PriceList;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
@@ -13,17 +13,17 @@ use Magento\Backend\Model\View\Result\Redirect;
 use Magento\Framework\App\Request\DataPersistorInterface;
 use Magento\Framework\Controller\ResultInterface;
 use Magento\Framework\Exception\LocalizedException;
-use SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterface;
-use SuttonSilver\PriceLists\Api\Data\PriceListCustomersInterfaceFactory;
-use SuttonSilver\PriceLists\Api\Data\PriceListProductsInterface;
-use SuttonSilver\PriceLists\Api\Data\PriceListProductsInterfaceFactory;
-use SuttonSilver\PriceLists\Api\PriceListCustomersRepositoryInterface;
-use SuttonSilver\PriceLists\Api\PriceListProductsRepositoryInterface;
-use SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts\Collection;
+use Swe\PriceLists\Api\Data\PriceListCustomersInterface;
+use Swe\PriceLists\Api\Data\PriceListCustomersInterfaceFactory;
+use Swe\PriceLists\Api\Data\PriceListProductsInterface;
+use Swe\PriceLists\Api\Data\PriceListProductsInterfaceFactory;
+use Swe\PriceLists\Api\PriceListCustomersRepositoryInterface;
+use Swe\PriceLists\Api\PriceListProductsRepositoryInterface;
+use Swe\PriceLists\Model\ResourceModel\PriceListProducts\Collection;
 
 /**
  * Class Save
- * @package SuttonSilver\PriceLists\Controller\Adminhtml\PriceList
+ * @package Swe\PriceLists\Controller\Adminhtml\PriceList
  */
 class Save extends Action
 {
@@ -48,11 +48,11 @@ class Save extends Action
      */
     protected $priceListCustomers;
     /**
-     * @var \SuttonSilver\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory
+     * @var \Swe\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory
      */
     protected $priceListCustomersCollection;
     /**
-     * @var \SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory
+     * @var \Swe\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory
      */
     protected $priceListProductsCollection;
 
@@ -67,8 +67,8 @@ class Save extends Action
     public function __construct(
         Context $context,
         PriceListCustomersRepositoryInterface $priceListCustomersRepository,
-        \SuttonSilver\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory $priceListCustomersCollection,
-        \SuttonSilver\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory $priceListProductsCollection,
+        \Swe\PriceLists\Model\ResourceModel\PriceListCustomers\CollectionFactory $priceListCustomersCollection,
+        \Swe\PriceLists\Model\ResourceModel\PriceListProducts\CollectionFactory $priceListProductsCollection,
         PriceListProductsRepositoryInterface $priceListProductsRepository,
         PriceListProductsInterfaceFactory $priceListProducts,
         PriceListCustomersInterfaceFactory $priceListCustomers,
@@ -101,7 +101,7 @@ class Save extends Action
 
             $id = $this->getRequest()->getParam('pricelist_id');
 
-            $model = $this->_objectManager->create(\SuttonSilver\PriceLists\Model\PriceList::class)->load($id);
+            $model = $this->_objectManager->create(\Swe\PriceLists\Model\PriceList::class)->load($id);
             if (!$model->getId() && $id) {
                 $this->messageManager->addErrorMessage(__('This Pricelist no longer exists.'));
                 return $resultRedirect->setPath('*/*/');
@@ -112,7 +112,7 @@ class Save extends Action
             try {
                 $model->save();
                 $this->messageManager->addSuccessMessage(__('You saved the Pricelist.'));
-                $this->dataPersistor->clear('suttonsilver_pricelists_pricelist');
+                $this->dataPersistor->clear('Swe_pricelists_pricelist');
 
                 $this->updateProducts($products, $model->getId());
                 $this->updateCustomers($customers, $model->getId());
@@ -127,7 +127,7 @@ class Save extends Action
                 $this->messageManager->addExceptionMessage($e, __('Something went wrong while saving the Pricelist.'));
             }
 
-            $this->dataPersistor->set('suttonsilver_pricelists_pricelist', $data);
+            $this->dataPersistor->set('Swe_pricelists_pricelist', $data);
             return $resultRedirect->setPath('*/*/edit', ['pricelist_id' => $this->getRequest()->getParam('pricelist_id')]);
         }
         return $resultRedirect->setPath('*/*/');
