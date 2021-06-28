@@ -44,4 +44,7 @@
 	<type name="Magento\Catalog\Block\Product\View">
 		<plugin disabled="false" name="SuttonSilver_PriceLists_Plugin_Magento_Catalog_Block_Product_View" sortOrder="1" type="SuttonSilver\PriceLists\Plugin\Magento\Catalog\Block\Product\ProductView"/>
 	</type>
+	<type name="Magento\Catalog\Model\Product">
+        <plugin disabled="false" name="SuttonSilver_PriceLists_Plugin_Magento_Catalog_Model_Product" sortOrder="10" type="SuttonSilver\PriceLists\Plugin\Magento\Catalog\Model\Product"/>
+    </type>
 </config>

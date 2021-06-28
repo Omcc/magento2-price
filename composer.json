@@ -1,12 +1,12 @@
 {
-    "name": "suttonsilver/module-pricelists",
+    "name": "swe/magento2-pricelists",
     "description": "Price List to set product specific customer pricing",
     "type": "magento2-module",
     "license": "proprietary",
     "authors": [
         {
-            "email": "d.coull@suttonsilver.co.uk",
-            "name": "Daniel Coull"
+            "email": "yunusyuksel95@gmail.com",
+            "name": "Yunus Yüksel"
         }
     ],
     "version": "1.0.1",
@@ -14,7 +14,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "SuttonSilver\\PriceLists\\": ""
+            "Swe\\PriceLists\\": ""
         },
         "files": [
             "registration.php"
